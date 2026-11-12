@@ -102,6 +102,41 @@ const sectionComponents: Record<string, React.ReactNode> = {
       </div>
     </section>
   ),
+    research: (
+    <section id="research">
+      <div className="flex min-h-0 flex-col gap-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+          <h2 className="text-xl font-bold">{DATA.sections.research.heading}</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+          <div className="flex flex-col gap-3">
+            <a href={DATA.research.image} target="_blank" rel="noopener noreferrer">
+              <img
+                src={DATA.research.image}
+                alt={DATA.research.title}
+                className="w-full h-auto rounded-xl border shadow-sm"
+                loading="lazy"
+              />
+            </a>
+            <div>
+              <h3 className="font-semibold">{DATA.research.title}</h3>
+              <p className="text-sm text-muted-foreground">{DATA.research.subtitle}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{DATA.research.description}</p>
+              <a
+                href={DATA.research.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4"
+              >
+                {DATA.research.linkLabel}
+                <ArrowUpRight className="h-4 w-4" aria-hidden />
+              </a>
+            </div>
+          </div>
+        </BlurFade>
+      </div>
+    </section>
+  ),
   projects: (
     <section id="projects">
       <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -142,7 +177,7 @@ export default function HomePage() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                text={`Hi, I'm ${DATA.name}`}
               />
               <BlurFadeText
                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"

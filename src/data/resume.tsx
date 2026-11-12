@@ -13,16 +13,17 @@ export const DATA = {
   location: "Philadelphia, PA",
   locationLink: "https://www.google.com/maps/place/philadelphia+pa",
   description:
-    "AI student at Penn building machine learning for medical imaging, genomics, and public-interest tools.",
+    "AI student at the University of Pennsylvania building machine learning for medical imaging, genomics, and public-interest tools.",
   summary:
-    "I'm studying [Artificial Intelligence at the University of Pennsylvania](/#education) (B.S.E., 2029). I build ML pipelines for real research problems: predicting kidney transplant failure from 166K patient records and [segmenting liver tumors in CT/MRI scans](/#work), with results that supported a successful NIH grant. Outside the lab, I've worked on autonomous navigation for the Penn Mars Rover, aircraft design optimization for Design Build Fly, and [a bilingual AI voice assistant for SNAP enrollment](/#hackathons). I'm looking for internships in software engineering, machine learning, data science, and product.",
-  avatarUrl: "/picofme.png", // replace public/picofme.png with your own photo (square works best)
+    "I'm studying Artificial Intelligence at the University of Pennsylvania (B.S.E. 2029). I build ML pipelines for real world research problems: predicting kidney transplant failure from 166K patient records and segmenting liver tumors in CT/MRI scans, with results that supported a successful NIH grant. Outside the lab, I've worked on autonomous navigation for the Penn Mars Rover, aircraft design optimization for Design Build Fly, and hackathon projects like a bilingual AI voice assistant for SNAP enrollment. I'm looking for internships in software engineering, machine learning, data science, and product.",
+  avatarUrl: "/picofme2.jpg", // replace public/picofme.png with your own photo (square works best)
   ogImage: "/og_image.png",
   sections: {
-    about: { order: 1, enabled: true, heading: "About" },
+    about: { order: 1, enabled: true, heading: "About Me" },
     work: { order: 2, enabled: true, heading: "Experience", presentLabel: "Present" },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
+    research: { order: 4.5, enabled: true, heading: "Research" },
     projects: {
       order: 5, enabled: true,
       label: "Projects & Leadership",
@@ -31,8 +32,7 @@ export const DATA = {
     },
     hackathons: {
       order: 6, enabled: true,
-      label: "Hackathons",
-      heading: "I like building things fast",
+      heading: "Hackathons",
       text: "Highlights from the hackathons I've competed in.",
     },
     photos: {
@@ -41,9 +41,9 @@ export const DATA = {
     },
     contact: {
       order: 8, enabled: true,
-      label: "Contact",
-      heading: "Get in Touch",
-      text: "I'm recruiting for internships. The fastest way to reach me is email, or connect with me on LinkedIn.",
+      label: "Reach Out to Me",
+      heading: "Let's Connect!",
+      text: "I'm recruiting for internships and would love to connect over email or LinkedIn.",
     },
   },
   photos: [],
@@ -124,13 +124,19 @@ export const DATA = {
   education: [
     {
       school: "University of Pennsylvania",
-      href: "https://www.seas.upenn.edu",
-      degree: "B.S.E. in Artificial Intelligence. Coursework: Algorithms, Data Structures, Computer Vision & Computational Photography, Big Data Analytics, Statistics & Probability, Technology Ethics",
+      href: "https://catalog.upenn.edu/undergraduate/programs/artificial-intelligence-bse/",
+      degree: "B.S.E. in Artificial Intelligence. Coursework: Algorithms, Data Structures, Big Data Analytics, Computer Vision, Statistics & Probability, Technology Ethics",
       logoUrl: "https://www.google.com/s2/favicons?domain=upenn.edu&sz=128",
       start: "2025",
       end: "2029",
     },
   ],
+   research: {
+    title: "ML Methods to Predict Amino Acid Positions Leading to Kidney Graft Failure",
+    subtitle: "Summer 2026 · University of Pennsylvania",
+    description: "Over summer 2026, I conducted research with ",
+    image: "/poster.png",
+  },
   projects: [
     {
       title: "Kidney Transplant Failure Prediction",
@@ -181,16 +187,33 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [
+    hackathons: [
     {
       title: "Oh, Snap! | Penn x Anthropic Hackathon",
       dates: "April 2026",
-      location: "Philadelphia, PA",
       description:
-        "Bilingual AI voice assistant that guides citizens through SNAP enrollment. Integrated OpenAI Whisper for speech, and parsed ~100 pages of SNAP policy into a vector index so LLM answers are grounded in real eligibility rules.",
+        "Bilingual AI voice assistant that guides citizens through SNAP enrollment. Integrated Claude LLM parsing, OpenAI Whisper for speech, and grounded LLM answers in ~100 pages of real SNAP policy with a vector index.",
       image: "",
       win: "Top 5, Democracy & Governance Track",
-      links: [],
+      links: [
+        {
+          title: "GitHub",
+          href: "https://github.com/ishabh-24/oh-snap",
+        },
+      ],
+    },
+    {
+      title: "Skin Journey | HackPrinceton",
+      dates: "April 2026",
+      description:
+        "Mobile skincare app that tracks skin health with a phone camera, flags patterns over time, and personalizes skincare routine recommendations. Used a U-Net segmentation model trained to estimate acne, eczema, and inflammation severity, with OpenAI Vision as a double-checker and retrieval-augmented routine generation with OpenAI.",
+      image: "",
+      links: [
+        {
+          title: "GitHub",
+          href: "https://github.com/ishabh-24/skin-journey",
+        },
+      ],
     },
   ],
 } as const;

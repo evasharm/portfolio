@@ -235,3 +235,59 @@
     @apply border-b-0;
   }
 }
+/* ---- Warm highlights (copper in light mode, amber in dark) ---- */
+
+/* Short accent bar under section headings */
+section h2.text-xl::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: var(--ring);
+}
+
+/* Warm ring around your photo */
+#hero .ring-muted {
+  --tw-ring-color: color-mix(in oklab, var(--ring) 55%, transparent);
+}
+
+/* Project cards: warm border + title on hover */
+#projects .rounded-xl.border:has(h3):hover {
+  border-color: var(--ring);
+  --tw-ring-color: color-mix(in oklab, var(--ring) 25%, transparent);
+}
+#projects .rounded-xl.border:has(h3):hover h3 { color: var(--ring); }
+
+/* Tech tags on project cards get a soft warm tint */
+#projects .rounded-xl.border:has(h3) .h-6 {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  border-color: transparent;
+}
+
+/* Skill pills warm up on hover */
+#skills .rounded-xl { transition: border-color .15s, color .15s; }
+#skills .rounded-xl:hover { border-color: var(--ring); }
+
+/* Award badge for hackathon wins */
+.win-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.dark body {
+  background-image: linear-gradient(
+    to bottom,
+    #121D38 0%,
+    #1F3054 50%,
+    #34507F 100%
+  );
+}

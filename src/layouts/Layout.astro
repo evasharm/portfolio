@@ -62,7 +62,7 @@ const { baseFontSize } = CONFIG.typography;
     <!-- Theme variables from config.ts -->
     <style
       set:html={`
-      :root {
+      :root:root {
         --radius: ${radius};
         --background: ${light.background};
         --foreground: ${light.foreground};
@@ -83,7 +83,7 @@ const { baseFontSize } = CONFIG.typography;
         --input: ${light.input};
         --ring: ${light.ring};
       }
-      .dark {
+      :root.dark {
         --background: ${dark.background};
         --foreground: ${dark.foreground};
         --card: ${dark.card};
