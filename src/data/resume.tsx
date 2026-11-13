@@ -13,9 +13,9 @@ export const DATA = {
   location: "Philadelphia, PA",
   locationLink: "https://www.google.com/maps/place/philadelphia+pa",
   description:
-    "AI student at the University of Pennsylvania building machine learning for medical imaging, genomics, and public-interest tools.",
+    "AI student at the University of Pennsylvania passionate about applying ML to spark innovation, drive social good, and solve complex real-world problems.",
   summary:
-    "I'm studying Artificial Intelligence at the University of Pennsylvania (B.S.E. 2029). I build ML pipelines for real world research problems: predicting kidney transplant failure from 166K patient records and segmenting liver tumors in CT/MRI scans, with results that supported a successful NIH grant. Outside the lab, I've worked on autonomous navigation for the Penn Mars Rover, aircraft design optimization for Design Build Fly, and hackathon projects like a bilingual AI voice assistant for SNAP enrollment. I'm looking for internships in software engineering, machine learning, data science, and product.",
+    "I'm studying Artificial Intelligence at the University of Pennsylvania. I've built ML pipelines for medical research: predicting kidney transplant failure with HLA amino acids, and segmenting liver tumors in CT/MRI scans. I've also worked on aircraft design optimization, AI business research, and hackathon projects like a bilingual AI voice assistant for SNAP enrollment. I'm interested in software engineering, machine learning, data science, and product roles, especially in medical or business applications.",
   avatarUrl: "/picofme2.jpg", // replace public/picofme.png with your own photo (square works best)
   ogImage: "/og_image.png",
   sections: {
@@ -28,12 +28,11 @@ export const DATA = {
       order: 5, enabled: true,
       label: "Projects & Leadership",
       heading: "Things I've built",
-      text: "Research pipelines, robots, aircraft, and tools for people who need them. A few highlights from my work at Penn.",
     },
     hackathons: {
       order: 6, enabled: true,
       heading: "Hackathons",
-      text: "Highlights from the hackathons I've competed in.",
+      text: "Highlights from the hackathons I've competed in:",
     },
     photos: {
       order: 7, enabled: false,
