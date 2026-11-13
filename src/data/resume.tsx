@@ -182,7 +182,6 @@ export const DATA = {
       description:
         "Python and CFD optimization framework that evaluated 15+ aircraft configurations for Penn Design Build Fly, quantifying tradeoffs between aerodynamics, payload, and competition score. Also managed a $5,000 budget and timelines for a 30-member team.",
       technologies: ["Python", "CFD", "Optimization"],
-      links: [],
       image: "",
       video: "",
     },

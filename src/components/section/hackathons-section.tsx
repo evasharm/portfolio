@@ -29,7 +29,6 @@ export default function HackathonsSection() {
                   {hackathon.links.map((link) => (
                     <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
                       <Badge className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground">
-                        {link.icon}
                         {link.title}
                       </Badge>
                     </a>
